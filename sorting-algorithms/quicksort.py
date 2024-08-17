@@ -1,8 +1,8 @@
 def partition (array, low, high):
     pivot = high # Use last element as pivot
     pivot_position = low; # Track index of pivot
-    for i in range(low, high):
 
+    for i in range(low, high):
         # If the current element is less than the last element, we swap it with the element at pivot_position and increment pivot_position
         if array[i] < array[pivot]:
             array[i], array[pivot_position] = array[pivot_position], array[i] # Swap
