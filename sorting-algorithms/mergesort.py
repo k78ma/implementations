@@ -1,4 +1,10 @@
 def mergesort(array, low, high):
+
+    # Base case: Array of length 1
+    if low == high:
+        return
+
+    # Recursive case
     if low < high:
         middle = (low + high) // 2
         mergesort(array, low, middle)
