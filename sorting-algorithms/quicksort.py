@@ -1,3 +1,10 @@
+def quicksort (array, low, high):
+    if low < high:
+        pivot = partition(array, low, high)
+        quicksort(array, low, pivot - 1)
+        quicksort(array, pivot + 1, high)
+
+
 def partition (array, low, high):
     pivot = high # Use last element as pivot
     pivot_position = low; # Track index of pivot
@@ -11,11 +18,6 @@ def partition (array, low, high):
     array[pivot], array[pivot_position] = array[pivot_position], array[pivot] # Swap the pivot from the end into the right position
     return pivot_position
 
-def quicksort (array, low, high):
-    if low < high:
-        pivot = partition(array, low, high)
-        quicksort(array, low, pivot - 1)
-        quicksort(array, pivot + 1, high)
 
 testArray = [2,5,6,7,9,3,10,1,8,4]
 
