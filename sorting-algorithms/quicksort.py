@@ -1,8 +1,10 @@
 def quicksort (array, low, high):
-    
+
+    # Base case: Array of length 1
     if low == high:
         return
     
+    # Recursive case
     if low < high:
         pivot = partition(array, low, high)
         quicksort(array, low, pivot - 1)
